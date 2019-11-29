@@ -1,31 +1,31 @@
 #
-# floating ip
+# floating IPs
 #
 
-output "floating_ip" {
-  value = openstack_networking_floatingip_v2.floating_ip
+output "floating_ips" {
+  value = openstack_networking_floatingip_v2.floating_ips
 }
 
 #
-# network port
+# network ports
 #
 
-output "instance_port" {
-  value = openstack_networking_port_v2.instance_port
+output "instance_ports" {
+  value = openstack_networking_port_v2.instance_ports
 }
 
 #
-# instance
+# instances
 #
 
-output "instance" {
-  value = openstack_compute_instance_v2.instance
+output "instances" {
+  value = openstack_compute_instance_v2.instances
 }
 
 #
-# floating IP association
+# floating IP associations
 #
 
-output "floating_ip_association" {
-  value = openstack_compute_floatingip_associate_v2.floating_ip_association
+output "floating_ip_associations" {
+  value = openstack_compute_floatingip_associate_v2.floating_ip_associations
 }
