@@ -67,3 +67,8 @@ variable "instance_config_drive" {
   description = "Whether or not to use a ConfigDrive for the new instance"
   default     = false
 }
+
+variable "instance_id_of_second_network" {
+  description = "ID of the second network to use for the instance"
+  default = false
+}
