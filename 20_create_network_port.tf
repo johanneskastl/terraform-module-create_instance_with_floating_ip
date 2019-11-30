@@ -8,7 +8,7 @@ resource "openstack_networking_port_v2" "instance_ports" {
   security_group_ids = var.port_security_group_ids
 
   dynamic "allowed_address_pairs" {
-    for_each = var.port_allowed_ip_adresses == [] ? var.port_allowed_ip_adresses : null
+    for_each = var.port_allowed_ip_adresses == [] ? [] : var.port_allowed_ip_adresses
     content {
       ip_address = allowed_address_pairs.value
     }
