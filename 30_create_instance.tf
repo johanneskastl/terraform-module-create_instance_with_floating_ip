@@ -13,7 +13,7 @@ resource "openstack_compute_instance_v2" "instances" {
   }
 
   dynamic "network" {
-    for_each = var.instance_id_of_second_network ? [var.instance_id_of_second_network] : []
+    for_each = var.instance_id_of_second_network == "" ? [] : [var.instance_id_of_second_network]
     content {
       uuid = network.value
     }
