@@ -38,6 +38,7 @@ variable "port_admin_state_up" {
 }
 
 variable "port_allowed_ip_adresses" {
+  type        = list
   description = "IP address allowed to run in this port (virtual IPs)"
   default     = []
 }
