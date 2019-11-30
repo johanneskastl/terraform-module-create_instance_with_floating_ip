@@ -10,7 +10,7 @@ resource "openstack_networking_port_v2" "instance_ports" {
   dynamic "allowed_address_pairs" {
     for_each = var.port_allowed_ip_adresses == [] ? [] : var.port_allowed_ip_adresses
     content {
-      ip_address = allowed_address_pairs.value
+      ip_address = allowed_address_pairs.value[0]
     }
   }
 }
