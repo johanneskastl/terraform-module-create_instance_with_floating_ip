@@ -7,6 +7,11 @@ variable "desired_number" {
   default     = 1
 }
 
+variable "module_depends_on" {
+  description = "List of resources or modules this module should depend on"
+  default     = ""
+}
+
 #
 # floating IP
 #
