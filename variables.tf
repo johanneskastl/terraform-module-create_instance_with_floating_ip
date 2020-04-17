@@ -76,5 +76,5 @@ variable "instance_config_drive" {
 
 variable "instance_id_of_second_network" {
   description = "ID of the second network to use for the instance"
-  default = ""
+  default     = ""
 }
