@@ -13,6 +13,14 @@ variable "module_depends_on" {
 }
 
 #
+# availability zone
+#
+
+variable "availability_zone" {
+  description = "Which availability zone is to be used?"
+}
+
+#
 # floating IP
 #
 
